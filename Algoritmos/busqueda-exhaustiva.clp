@@ -1,8 +1,5 @@
 ;http://www.comp.rgu.ac.uk/staff/smc/teaching/clips/vol1/vol1-Contents.html
 
-
-
-
 (defglobal 
 ?*ESTADO-INICIAL* = (create$ h1 aspiradora sucia h2 sucia)
 ?*LISTA* = (create$   (implode$ ?*ESTADO-INICIAL*))
@@ -16,7 +13,7 @@
  ?*SOLUCIONES-COSTE* = (create$)
 )
 
-;sistema-aspiradora: lista (h1 aspiradora sucia h2 sucia)
+;Sistema-aspiradora: lista (h1 aspiradora sucia h2 sucia)
 
 ;Es una función que devuelve h1 y su contenido
 
@@ -259,8 +256,6 @@ else (if (=(length$ ?*LISTA*)0)  then (printout t "No hay solución" crlf)))
 			(bind ?mini ?i))
 		(bind $?lista (rest$ $?lista)))
 	?mini)
-		
-		
 
 (deffunction busqueda-british-prof-mejor (?g $?lista)
 (bind ?i 0)
@@ -292,8 +287,6 @@ else (if (=(length$ ?*LISTA*)0)  then (printout t "No hay solución" crlf)))
 	(bind ?mejor (nth$ (busca-min ?*SOLUCIONES-COSTE*) ?*SOLUCIONES*))
 	(printout t "La mejor sulción está:" ?mejor crlf)
 else (if (=(length$ ?*LISTA*)0)  then (printout t "No hay solución" crlf)))
-
-
 
 )
  
